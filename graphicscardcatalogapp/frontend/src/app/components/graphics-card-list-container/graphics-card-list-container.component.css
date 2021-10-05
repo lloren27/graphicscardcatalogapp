@@ -1,6 +1,7 @@
 .title {
   text-align: center;
   font-size: 40px;
+  font-style: italic;
 }
 .cards-container {
   background-color: #414446;
@@ -30,7 +31,13 @@
 
 .search-name {
   border-radius: 5px;
-  width: 45%;
+  width: 100%;
+}
+
+.search-name::placeholder {
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .search-name-container {
@@ -39,7 +46,7 @@
 }
 
 .graphics-card-list {
-  padding: 50px !important;
+  padding: 35px !important;
 }
 
 .card-footer {

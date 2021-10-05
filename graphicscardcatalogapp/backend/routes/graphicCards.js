@@ -12,11 +12,4 @@ router.get("/", (req, res, next) => {
   });
 });
 
-// DETAILS
-router.get("/:id", (req, res, next) => {
-  GraphicCard.findById(req.params.id)
-    .then((graphicsCard) => res.json(graphicsCard))
-    .catch((e) => next(e));
-});
-
 module.exports = router;
