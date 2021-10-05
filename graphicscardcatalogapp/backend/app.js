@@ -30,15 +30,12 @@ const debug = require("debug")(
 
 const app = express();
 
-const whitelist = ["http://localhost:4200", "http://localhost:8080"];
-const corsOptions = {
-  origin: function (origin, callback) {
-    var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
-    callback(null, originIsWhitelisted);
-  },
-  credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    credentials: true,
+    origin: ["http://localhost:4200"],
+  })
+);
 
 // Middleware Setup
 app.use(logger("dev"));
