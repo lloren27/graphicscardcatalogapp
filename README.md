@@ -10,4 +10,5 @@ Backend
 Frontend 
 
 1.Después de descomprimir el proyecto realizar un npm i. 
+
 2.Levantar el frontal con ng serve -o 
