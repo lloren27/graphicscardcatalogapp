@@ -1,0 +1,42 @@
+.title {
+  text-align: center;
+  font-size: 40px;
+}
+.cards-container {
+  background-color: black;
+  opacity: 0.8;
+  padding-bottom: 300px;
+  padding-top: 200px;
+}
+
+.cards-group {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.name {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 23px;
+  line-height: 0.7;
+}
+
+.link {
+  text-decoration: none !important;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.search-name {
+  border-radius:5px;
+}
+
+.search-name-container{
+  text-align: center;
+  margin: 20px;
+}

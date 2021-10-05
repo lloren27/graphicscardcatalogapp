@@ -1,0 +1,15 @@
+.graphics-card-detail {
+  margin-top: 50px;
+}
+.title {
+  text-align: center;
+}
+.card {
+  margin: 0 auto;
+}
+.back-button{
+  margin-left: 20px;
+}
+.back {
+  border-radius: 3px;
+}

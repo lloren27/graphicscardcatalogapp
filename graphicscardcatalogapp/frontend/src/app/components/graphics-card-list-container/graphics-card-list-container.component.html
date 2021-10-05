@@ -1,0 +1,28 @@
+<div class="title">Tarjetas gráficas</div>
+
+<div class="cards-container">
+  <div class="search-name-container">
+    <input
+      type="”text”"
+      name="”searchTerm”"
+      [(ngModel)]="searchTerm"
+      placeholder="Buscar Tarjeta gráfica"
+      class="search-name"
+    />
+  </div>
+  <div class="cards-group">
+    <div *ngFor="let grapicsCard of graphicsCardList | filter: searchTerm">
+      <ul>
+        <li>
+          <h3 class="name">
+            <a
+              class="link"
+              [routerLink]="['/graphics-cards/', grapicsCard._id]"
+              >{{ grapicsCard.name }}</a
+            >
+          </h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="graphics-card-detail">
+  <div class="back-button">
+    <button class="btn-danger back" [routerLink]="['/']">
+      Volver al listado
+    </button>
+  </div>
+  <h3 class="title">Detalle de la tarjeta gráfica</h3>
+  <div class="card" style="width: 18rem">
+    <img
+      class="card-img-top"
+      [src]="this.graphicsCard.image"
+      alt="{{ this.graphicsCard.model }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ this.graphicsCard.name }}</h5>
+      <p class="card-text">{{ this.graphicsCard.model }}</p>
+      <p class="card-text">{{ this.graphicsCard.manufacturer }}</p>
+      <p class="card-text">{{ this.graphicsCard.price }}</p>
+    </div>
+  </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.97)"
+  size="medium"
+  color="#fff"
+  type="timer"
+  loadingText="Cargando..."
+>
+</ngx-spinner>
