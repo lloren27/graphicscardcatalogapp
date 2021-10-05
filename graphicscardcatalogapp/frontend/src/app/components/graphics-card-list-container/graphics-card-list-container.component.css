@@ -3,7 +3,7 @@
   font-size: 40px;
 }
 .cards-container {
-  background-color: black;
+  background-color: #414446;
   opacity: 0.8;
   padding-bottom: 300px;
   padding-top: 200px;
@@ -11,10 +11,6 @@
 
 .cards-group {
   text-align: center;
-}
-
-ul {
-  list-style-type: none;
 }
 
 .name {
@@ -33,10 +29,33 @@ ul {
 }
 
 .search-name {
-  border-radius:5px;
+  border-radius: 5px;
+  width: 45%;
 }
 
-.search-name-container{
+.search-name-container {
   text-align: center;
   margin: 20px;
+}
+
+.graphics-card-list {
+  padding: 50px !important;
+}
+
+.card-footer {
+  text-align: center;
+  border: none;
+  background-color: #414446;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+  background: red;
+}
+.my-pagination /deep/ .ngx-pagination {
+  padding: 0;
+  margin: 0;
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
 }

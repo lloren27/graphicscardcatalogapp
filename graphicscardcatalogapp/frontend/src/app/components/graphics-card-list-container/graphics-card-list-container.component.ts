@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from "@angular/core";
 import { Observable, Subscription } from "rxjs";
 import { Store, select } from "@ngrx/store";
 
@@ -11,7 +11,7 @@ import * as GraphicsCardAction from "../../state/graphicsCards.actions";
   selector: "app-graphics-card-list-container",
   templateUrl: "./graphics-card-list-container.component.html",
   styleUrls: ["./graphics-card-list-container.component.css"],
-  changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GraphicsCardListContainerComponent implements OnInit {
   searchTerm: string = "";
@@ -19,8 +19,12 @@ export class GraphicsCardListContainerComponent implements OnInit {
   graphicsCardSubscription: Subscription;
   graphicsCardList: GraphicsCard[] = [];
   graphicsCardError: Error = null;
+  p: number = 1;
 
-  constructor(private store: Store<{ graphicsCards: AppState }>) {
+  constructor(
+    private store: Store<{ graphicsCards: AppState }>,
+    private cd: ChangeDetectorRef
+  ) {
     this.graphicsCard$ = store.pipe(select("graphicsCards"));
   }
 
@@ -30,11 +34,13 @@ export class GraphicsCardListContainerComponent implements OnInit {
         map((x) => {
           this.graphicsCardList = x.graphicsCards;
           this.graphicsCardError = x.GraphicsCardError;
+          this.cd.markForCheck();
         })
       )
       .subscribe();
 
     this.store.dispatch(GraphicsCardAction.BeginGetGraphicsCardAction());
+  
   }
 
   ngOnDestroy() {

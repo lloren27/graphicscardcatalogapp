@@ -18,6 +18,8 @@ import { GraphicsCardReducer } from "./state/graphicsCards.reducer";
 import { GraphicsCardEffects } from "./state/graphicsCards.effects";
 import { FilterPipe } from "./pipes/filter.pipe";
 import { FormsModule } from "@angular/forms";
+import { NgxPaginationModule } from "ngx-pagination";
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { FormsModule } from "@angular/forms";
     NgxSpinnerModule,
     BrowserAnimationsModule,
     FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],

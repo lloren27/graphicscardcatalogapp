@@ -7,9 +7,17 @@
 .card {
   margin: 0 auto;
 }
-.back-button{
+.back-button {
   margin-left: 20px;
 }
 .back {
   border-radius: 3px;
 }
+.red {
+  color: red;
+}
+.card-body {
+  background-color: #414446;
+  color: white;
+}
+
